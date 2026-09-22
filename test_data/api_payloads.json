@@ -1,0 +1,10 @@
+{
+    "create_user": {
+        "name": "Alice",
+        "email": "alice@test.com"
+    },
+    "create_order": {
+        "product_id": 1,
+        "quantity": 1
+    }
+}

@@ -1,0 +1,11 @@
+def generate_login_test_data():
+    return {
+        "valid_user": {
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        "invalid_user": {
+            "username": "invalid_user",
+            "password": "wrong_password"
+        }
+    }

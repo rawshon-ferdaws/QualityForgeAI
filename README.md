@@ -1,47 +1,15 @@
-# QualityForgeAI
-
-QualityForgeAI is a Selenium UI automation portfolio project built with Python, Pytest, and Page Object Model.
-
-## Project Structure
-
-```text
-qualityforge-ai/
-├── pages/
-│   ├── __init__.py
-│   ├── base_page.py
-│   ├── login_page.py
-│   ├── products_page.py
-│   ├── cart_page.py
-│   └── checkout_page.py
-├── tests/
-│   ├── __init__.py
-│   ├── test_login.py
-│   ├── test_products.py
-│   ├── test_cart.py
-│   └── test_checkout.py
-├── utilities/
-│   └── __init__.py
-├── conftest.py
-├── pytest.ini
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
-
-## Run Tests
-
-```bash
-python -m pytest
-```
-
-Run smoke tests:
-
-```bash
-python -m pytest -m smoke
-```
-
-Run regression tests:
-
-```bash
-python -m pytest -m regression
-```
+| Area                   | What We Are Applying                                                                                                                                                                                  |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Purpose of Testing** | To verify that the application works correctly across **UI, API, and backend layers**, catch defects early, validate critical user workflows, and ensure reliable releases through automated testing. |
+| **What We Are Doing**  | Automating **positive, negative, regression, integration, and E2E scenarios** using reusable framework components.                                                                                    |
+| **Selenium**           | UI automation using **Page Object Model (POM)**, locators, explicit waits, reusable actions, and browser automation.                                                                                  |
+| **Browser**            | **Firefox — current stable execution browser.** Chrome is supported but currently has a Chrome/WebDriver stability issue in our environment.                                                          |
+| **Pytest**             | Test execution, fixtures, assertions, markers, test organization, setup and teardown.                                                                                                                 |
+| **API**                | API automation using **Python Requests** — GET, POST, PUT/PATCH, DELETE, payloads, parameters, headers, and response validation.                                                                      |
+| **Database**           | **SQL-based** backend/data validation.                                                                                                                                                                |
+| **CI/CD Pipeline**     | **GitHub Actions** for automated test execution on code changes.                                                                                                                                      |
+| **Docker**             | Reproducible and consistent test execution environment.                                                                                                                                               |
+| **AI Pipeline**        | LLM-assisted **failure analysis, test generation, test-data generation, and CI test summaries**.                                                                                                      |
+| **LLM**                | **Yes** — existing LLM integration for AI-assisted QA.                                                                                                                                                |
+| **LLM Trainer**        | **No** — we are not training an LLM from scratch.                                                                                                                                                     |
+| **Current Status**     | **UI automation complete — 18/18 tests passing** across Login, Products, Cart, Checkout, and E2E purchase flow.                                                                                       |
