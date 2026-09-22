@@ -1,6 +1,6 @@
 Project Architecture / Current Framework Summary
 
-| Area                   | What We Are Applying                                                                                                                                                                                  |
+| Area                   | What I am Applying                                                                                                                                                                                  |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Purpose of Testing** | To verify that the application works correctly across **UI, API, and backend layers**, catch defects early, validate critical user workflows, and ensure reliable releases through automated testing. |
 | **What We Are Doing**  | Automating **positive, negative, regression, integration, and E2E scenarios** using reusable framework components.                                                                                    |
@@ -18,7 +18,7 @@ Project Architecture / Current Framework Summary
 
 UI Testing — Selenium + POM Automation
 
-| Point                  | What We Applied                                                                                                                |
+| Point                  | What I Applied                                                                                                                |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | **Purpose**            | Verify critical user workflows through the browser, detect functional defects, and provide confidence before release.          |
 | **Framework**          | **Python + Selenium WebDriver + Pytest + Page Object Model (POM)** automation framework.                                       |
@@ -44,7 +44,7 @@ UI Testing — Selenium + POM Automation
 
 API Testing — Python Requests + Pytest
 
-| Point                        | What We Applied                                                                                                                              |
+| Point                        | What I Applied                                                                                                                              |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Purpose**                  | Verify that backend APIs return the correct **status codes, headers, response data, structure, and data types** without depending on the UI. |
 | **Framework**                | **Python + Requests + Pytest** API automation framework.                                                                                     |
