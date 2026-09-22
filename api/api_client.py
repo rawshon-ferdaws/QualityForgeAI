@@ -1,34 +1,51 @@
 import requests
 
+from utilities.config_reader import ConfigReader
+
 
 class APIClient:
 
-    def __init__(self, base_url):
-        self.base_url = base_url.rstrip("/")
+    def __init__(self):
+        self.base_url = ConfigReader.get_api_base_url()
+        self.timeout = ConfigReader.get_api_timeout()
 
-    def get(self, endpoint, headers=None, params=None):
-        return requests.get(
-            self.base_url + endpoint,
-            headers=headers,
-            params=params
+        self.session = requests.Session()
+
+        self.session.headers.update({
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        })
+
+    def get(self, endpoint, params=None):
+        return self.session.get(
+            f"{self.base_url}{endpoint}",
+            params=params,
+            timeout=self.timeout
         )
 
-    def post(self, endpoint, payload=None, headers=None):
-        return requests.post(
-            self.base_url + endpoint,
+    def post(self, endpoint, payload=None):
+        return self.session.post(
+            f"{self.base_url}{endpoint}",
             json=payload,
-            headers=headers
+            timeout=self.timeout
         )
 
-    def put(self, endpoint, payload=None, headers=None):
-        return requests.put(
-            self.base_url + endpoint,
+    def put(self, endpoint, payload=None):
+        return self.session.put(
+            f"{self.base_url}{endpoint}",
             json=payload,
-            headers=headers
+            timeout=self.timeout
         )
 
-    def delete(self, endpoint, headers=None):
-        return requests.delete(
-            self.base_url + endpoint,
-            headers=headers
+    def patch(self, endpoint, payload=None):
+        return self.session.patch(
+            f"{self.base_url}{endpoint}",
+            json=payload,
+            timeout=self.timeout
+        )
+
+    def delete(self, endpoint):
+        return self.session.delete(
+            f"{self.base_url}{endpoint}",
+            timeout=self.timeout
         )

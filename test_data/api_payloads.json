@@ -1,10 +1,24 @@
 {
-    "create_user": {
-        "name": "Alice",
-        "email": "alice@test.com"
-    },
-    "create_order": {
-        "product_id": 1,
-        "quantity": 1
-    }
+  "create_post": {
+    "title": "QualityForge API Test",
+    "body": "Testing POST request using QualityForge AI",
+    "userId": 1
+  },
+
+  "update_post": {
+    "id": 1,
+    "title": "Updated QualityForge API Test",
+    "body": "Testing PUT request using QualityForge AI",
+    "userId": 1
+  },
+
+  "patch_post": {
+    "title": "Patched QualityForge API Test"
+  },
+
+  "invalid_post": {
+    "title": "",
+    "body": "",
+    "userId": null
+  }
 }
